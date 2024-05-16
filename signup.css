@@ -31,3 +31,10 @@
   input[type="submit"]:hover {
     background-color: #3e8e41;
   }
+  
+ #signup-form {
+  font-weight: bold;
+  color: #666;
+  margin-top: 20px;
+
+  }
