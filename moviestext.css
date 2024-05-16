@@ -3,7 +3,7 @@
 }
 
 .body{
-    font-family: sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .navbar{
@@ -19,6 +19,7 @@
      padding: 0 50px;
      height: 100%;
      color: whitesmoke;
+     font-family: sans-serif;
 }
 
 .logo-container{
@@ -44,10 +45,20 @@
     margin-right: 30px;
 }
 
-.payment-container{
+menu-list-items .active{
+    font-weight: bold;
+}
+
+.profile-container{
     flex: 2;
 }
 
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
 .sidebar{
     width: 50px;
