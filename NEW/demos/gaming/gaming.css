@@ -349,3 +349,7 @@ body {
 	width: 128px !important;
 	height: auto !important;
 }
+
+.center-container {
+	text-align: center;
+}
