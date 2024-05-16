@@ -51,6 +51,13 @@ menu-list-items .active{
 
 .profile-container{
     flex: 2;
+    display: flex;
+    align-items: center;
+   
+}
+
+.profile-text-container{
+    margin: 0 20px;
 }
 
 .profile-picture{
@@ -58,6 +65,14 @@ menu-list-items .active{
     height: 32px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.toggle{
+    width: 2px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+
 }
 
 .sidebar{
