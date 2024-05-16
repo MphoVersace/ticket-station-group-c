@@ -1,0 +1,50 @@
+*{
+  margin: 0;  
+}
+
+.body{
+    font-family: sans-serif;
+}
+
+.navbar-container{
+     display: flex;
+     align-items: center;
+     background-color: ghostwhite;
+     padding: 0 50px;
+     height: 100%;
+     color: black;
+}
+
+.logo-container{
+    flex: 1;
+    background: crimson;
+}
+
+.logo{
+    font-family: sans-serif;
+
+}
+
+.menu-container{
+    flex: 6;
+    background: crimson;
+}
+
+.payment-container{
+    flex: 2;
+    background: crimson;
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: darkslategray;
+}
+
+.sidebar{
+    width: 50%;
+    height: 100px;
+    background-color: darkslategray;
+    position: fixed;
+    top: 0;
+}
