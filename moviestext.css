@@ -112,7 +112,7 @@ menu-list-items .active{
 }
 
 .container{
-    background-color: black;
+    background-color:black;
     min-height: calc(100vh - 50px);
     color: white;
 }
@@ -124,7 +124,7 @@ menu-list-items .active{
 .featured-content{
     height: 50vh;
     padding: 50px;
-    background-color: #330533;
+    background-color: white;
 }
 
 .featured-title{
@@ -150,8 +150,83 @@ menu-list-items .active{
 .movie-list-container{
     padding: 20px;
 }
+
+.movie-list-wrapper{
+    position: relative;
+}
+
+.movie-list{
+    display: flex;
+    align-items: center;
+    height: 300px;
+}
+
+.movie-list-item{
+    margin-right: 30px;
+    position: relative;
+}
+
+.movie-list-item:hover ,.movie-list-item-images .movietext{
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0,5;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button{
+    opacity: 1;
+}
+
 .movie-list-item-images movietext{
-    width: 670px;
-    height: 600px;
+    transition: all 1s ease-in-out;
+    width: 370px;
+    height: 300px;
     object-fit: cover;
+}
+
+.movie-list-item-title{
+    background-color: black;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: Is all ease-in-out; 
+}
+
+.movie-list-item-desc{
+    background-color: gray;
+    padding: 0 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 10%;
+    left: 30px;
+    width: 230px;
+    opacity: 0; 
+    transition: Is all ease-in-out; 
+}
+
+.movie-list-item-button{
+    padding: 10px;
+    background-color: plum;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: Is all ease-in-out; 
+}
+
+.arrow{
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+
 }
