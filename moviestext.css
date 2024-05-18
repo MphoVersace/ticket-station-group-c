@@ -9,13 +9,13 @@
 .navbar{
     width: 100%;
     height: 50px;
-    background-color: darkslategray;
+    background-color: #330553;
 }
 
 .navbar-container{
      display: flex;
      align-items: center;
-     background-color: darkslategrey;
+     background-color: #330553;
      padding: 0 50px;
      height: 100%;
      color: whitesmoke;
@@ -70,7 +70,7 @@ menu-list-items .active{
 .toggle{
     width: 2px;
     height: 20px;
-    background-color: white;
+    background-color: plum;
     border-radius: 30px;
 
 }
@@ -78,7 +78,47 @@ menu-list-items .active{
 .sidebar{
     width: 50px;
     height: 100%;
-    background-color: darkslategray;
+    background-color: #330553;
     position: fixed;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.left-menu-icon{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40%;
+}
+
+.container{
+    background-color: black;
+    height: calc(100vh - 50px);
+    color: white;
+}
+
+.content-container{
+    margin-left: 50px;
+}
+
+.featured-content{
+    height: 50vh;
+    padding: 50px;
+    background-color: crimson;
+}
+
+.featured-title{
+    width: 200px;
+}
+
+.featured-desc{
+    width: 500px;
+    color: darkgrey;
+    margin: 30px 0;
+}
+
+.featured-button{
+    background-color: ;
 }
