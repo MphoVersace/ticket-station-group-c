@@ -3,19 +3,19 @@
 }
 
 .body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .navbar{
     width: 100%;
     height: 50px;
-    background-color: #330553;
+    background-color: black;
 }
 
 .navbar-container{
      display: flex;
      align-items: center;
-     background-color: #330553;
+     background-color: black;
      padding: 0 50px;
      height: 100%;
      color: whitesmoke;
@@ -29,7 +29,7 @@
 .logo{
     font-family: sans-serif;
     font-size: 30px;
-    color: black;
+    color:black;
 }
 
 .menu-container{
@@ -68,17 +68,35 @@ menu-list-items .active{
 }
 
 .toggle{
-    width: 2px;
+    width: 40px;
     height: 20px;
     background-color: plum;
     border-radius: 30px;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
 }
+
+.toggle-icon{
+    color: chartreuse;
+}
+
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 
 .sidebar{
     width: 50px;
     height: 100%;
-    background-color: #330553;
+    background-color: black;
     position: fixed;
     top: 0;
     display: flex;
@@ -90,12 +108,12 @@ menu-list-items .active{
 .left-menu-icon{
     color: white;
     font-size: 20px;
-    margin-bottom: 40%;
+    margin-bottom: 40px;
 }
 
 .container{
     background-color: black;
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
     color: white;
 }
 
@@ -106,7 +124,7 @@ menu-list-items .active{
 .featured-content{
     height: 50vh;
     padding: 50px;
-    background-color: crimson;
+    background-color: #330533;
 }
 
 .featured-title{
@@ -120,5 +138,20 @@ menu-list-items .active{
 }
 
 .featured-button{
-    background-color: ;
+    background-color: plum;
+    color: whitesmoke;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+.movie-list-container{
+    padding: 20px;
+}
+.movie-list-item-images movietext{
+    width: 670px;
+    height: 600px;
+    object-fit: cover;
 }
