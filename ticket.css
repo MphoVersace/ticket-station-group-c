@@ -1,0 +1,55 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+.image-container {
+    text-align: center;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.movie-selection,
+.seat-selection {
+    margin: 20px 0;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.seat {
+    background: #444451;
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.seat.selected {
+    background: #6feaf6;
+}
+
+.seat.occupied {
+    background: #fff;
+}
+
+.text {
+    text-align: center;
+    margin-top: 20px;
+}

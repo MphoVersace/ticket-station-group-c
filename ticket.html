@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Station</title>
+    <link rel="stylesheet" href="ticket.css">
+</head>
+<body>
+    <div class="container"><div class="image-container">
+        <img src="logo1 copy.png" alt="sk">
+    </div>
+    
+        <h1>SK Ticket Station</h1>
+        <div class="movie-selection">
+            <label for="movie">Choose a movie:</label>
+            <select id="movie">
+                <option value="10">Frozen(R10)</option>
+                <option value="12">Sarafina(R12)</option>
+                <option value="8">Bad Boys(R8)</option>
+                <option value="9">The Lion King (R9)</option>
+            </select>
+        </div>
+        <div class="seat-selection">
+            <h2>Select Seats</h2>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+        </div>
+        <p class="text">
+            You have selected <span id="count">0</span> seats for a price of $<span id="total">0</span>
+        </p>
+    </div>
+    <script src="ticket.js"></script>
+</body>
+</html>
