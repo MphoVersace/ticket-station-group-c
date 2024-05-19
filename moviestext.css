@@ -76,6 +76,7 @@ menu-list-items .active{
     align-items: center;
     justify-content: space-around;
     position: relative;
+    transition: 1s ease-in-out;
 }
 
 .toggle-icon{
@@ -267,4 +268,10 @@ menu-list-items .active{
 .toggle-ball.active{
     background-color: whitesmoke;
     transform: translateX(-20px);
+}
+
+@media only screen and (max-width:940px){
+    ,menu-container{
+        display: none;
+    }
 }
