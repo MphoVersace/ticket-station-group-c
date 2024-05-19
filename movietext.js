@@ -1,10 +1,10 @@
 const arrows = document.querySelectorAll(".arrows");
-const movielists = document.querySelectorAll(".movielist");
+const movieLists = document.querySelectorAll(".movie-list");
 
-arrows.forEach((arrow,i)=>{
-    arrow.addEventListener("click", ()=>{
-        movielists[i].style.transform = translateX(${
-            movielists[i].computedStyleMap().get("transform")[0].x.value
-        -270}px);  
+arrows.forEach((arrow,movietext)=>{
+    arrows.addEventListener("click", ()=>{
+        movieLists[movietext].style.transform = translateX(${
+            movieLists[movietext].computedStyleMap().get("transform")[0].x.value
+        -300}px);  
     })
 })
