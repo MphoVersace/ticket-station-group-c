@@ -148,17 +148,20 @@ menu-list-items .active{
 }
 
 .movie-list-container{
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .movie-list-wrapper{
     position: relative;
+    overflow: hidden;
 }
 
 .movie-list{
     display: flex;
     align-items: center;
     height: 300px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
 }
 
 .movie-list-item{
