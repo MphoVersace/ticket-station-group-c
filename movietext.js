@@ -101,6 +101,7 @@ class Ticket {
   
   document.addEventListener('DOMContentLoaded', () => new TicketStation());
   
+  
 const arrows = document.querySelectorAll(".arrows");
 const movieLists = document.querySelectorAll(".movie-list");
 

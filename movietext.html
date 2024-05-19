@@ -71,11 +71,20 @@
             <div class="movie-list-wrapper">
                 <div class="movie-list">
                   <div class="movie-list-item">
+                    
                     <img class="movie-list-item-images movietext" src="NEW/images/crew.jpeg" alt="crew">
                     <span class="movie-list-item-title"></span>
                     <p class="movie-list-item-desc"></p>
                     <button class="movie-list-item-button">Watch</button>
+                    
                   </div>
+                  <div class="col-md-6 p-5 p-lg-6">
+                    <h2 class="display-5 text-light text-uppercase ls-1 fw-bolder text-shadow-effect text-shadow-effect-size-3">
+                    
+                 
+                  </div>
+
+                 
                   <div class="movie-list-item">
                     <img class="movie-list-item-images movietext" src="NEW/images/apes.jpeg" alt="apes">
                     <span class="movie-list-item-title"></span>
@@ -192,13 +201,17 @@
                     <span class="movie-list-item-title"></span>
                     <p class="movie-list-item-desc"></p>
                     <button class="movie-list-item-button">Pre-Order</button>
+                    
                   </div>
                   <div class="movie-list-item">
                     <img class="movie-list-item-images movietext" src="NEW/images/strange.jpeg" alt="Strange">
                     <span class="movie-list-item-title"></span>
                     <p class="movie-list-item-desc"></p>
                     <button class="movie-list-item-button">Pre-Order</button>
+
+              
                   </div>
+                 
                   <div class="movie-list-item">
                     <img class="movie-list-item-images movietext" src="NEW/images/outside.jpeg" alt="Outside">
                     <span class="movie-list-item-title"></span>
@@ -290,15 +303,19 @@
   <div class="container">
     <h1>Ticket Station</h1>
     <div class="form-group">
-
-		<input type="radio" id="standard" name="ticketType" value="standard" checked>
-	<label for="standard">Standard</label>
-	<input type="radio" id="vip" name="ticketType" value="vip">
-	<label for="vip">VIP</label>
-	<input type="radio" id="vvip" name="ticketType" value="vvip">
-	<label for="vvip">VVIP</label>
       <label for="quantity">Quantity:</label>
       <input type="number" id="quantity" min="1" max="10" value="1">
+    </div>
+    <div class="form-group">
+      <label for="ticketType">Ticket Type:</label>cart
+      <div>
+        <input type="radio" id="standard" name="ticketType" value="standard" checked>
+        <label for="standard">Standard</label>
+        <input type="radio" id="vip" name="ticketType" value="vip">
+        <label for="vip">VIP</label>
+        <input type="radio" id="vvip" name="ticketType" value="vvip">
+        <label for="vvip">VVIP</label>
+      </div>
     </div>
     <div id="cart">
       <h2>Cart</h2>
@@ -310,8 +327,6 @@
       <button id="clearButton">Clear Cart</button>
     </div>
   </div>
- 
-</div>
   <script src="movietext.js"></script>
 
 
