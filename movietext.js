@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //The Ticket class encapsulates the properties and behavior of a ticket.
 class Ticket {
     constructor(event, quantity, price, ticketType) {
@@ -102,7 +101,6 @@ class Ticket {
   
   document.addEventListener('DOMContentLoaded', () => new TicketStation());
   
-=======
 const arrows = document.querySelectorAll(".arrows");
 const movieLists = document.querySelectorAll(".movie-list");
 
@@ -134,8 +132,13 @@ ball.addEventListener("click",()=>{
     })
 <<<<<<< HEAD
 })
+<<<<<<< HEAD
 >>>>>>> 5ff9128f36297102aaa9ea38511a0658fa318241
 =======
     ball.classList.toggle("active")
 })
 >>>>>>> 0355074f29ba5e815c5a469d2fe52c684d9090c7
+=======
+
+
+>>>>>>> 24c68bc8c061f2ac2d646ff5c0e62f88d248b90f

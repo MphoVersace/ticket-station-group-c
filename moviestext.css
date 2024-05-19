@@ -240,6 +240,7 @@ menu-list-items .active{
 
 }
 
+<<<<<<< HEAD
 .container.active{
     background-color: whitesmoke;
 }
@@ -275,3 +276,8 @@ menu-list-items .active{
         display: none;
     }
 }
+=======
+
+
+
+>>>>>>> 24c68bc8c061f2ac2d646ff5c0e62f88d248b90f
