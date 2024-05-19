@@ -50,3 +50,12 @@
     padding: 20px;
     background-color: #fff;
   }
+  /* This applies the background image to the entire page */
+body {
+    background-image: url('images/Blue wall.jpeg');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    margin: 0; /* Removes any default margin */
+    padding: 0; 
+}
