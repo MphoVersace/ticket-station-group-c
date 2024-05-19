@@ -1,69 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ticket Station</title>
-    <link rel="stylesheet" href="ticket.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Ticket Station</h1>
-    <div class="logo">
-        <img src="logo1.png" alt="SK-Logo">
-    </div>
-    <div class="container">
-        <h1>Standard</h1>
-        <div id="ticket-form">
-            <label for="ticket-type">Choose a ticket type:</label>
-            <select id="ticket-type">
-                <option value="standard">Standard Ticket</option>
-                <option value="vip">VIP Ticket</option>
-                <option value="vvip">VVIP</option>
-            </select>
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" min="1" value="1">
-            <button id="buy-ticket">Buy Ticket</button>
-        </div>
-        <div id="ticket-details"></div>
+  <div class="movie-container">
+    <h1>Movies</h1>
+    <ul id="movie-list"></ul>
+    <div class="ticket-container">
+      <h2>Purchase Tickets</h2>
+      <form id="ticket-form">
+        <label for="movie">Select Movie:</label>
+        <select id="movie"></select>
+        <label for="showtime">Select Showtime:</label>
+        <select id="showtime"></select>
+        <label for="seats">Number of Seats:</label>
+        <input type="number" id="seats" min="1" max="10">
+        <input type="submit" value="Purchase Tickets">
+      </form>
     </div>
 
-    <div class="logo">
-        <img src="logo1.png" alt="SK-Logo">
-    </div>
-    <div class="container">
-        <h1>VIP</h1>
-        <div id="ticket-form">
-            <label for="ticket-type">Choose a ticket type:</label>
-            <select id="ticket-type">
-                <option value="standard">Standard Ticket</option>
-                <option value="vip">VIP Ticket</option>
-                <option value="vvip">VVIP</option>
-            </select>
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" min="1" value="1">
-            <button id="buy-ticket">Buy Ticket</button>
-        </div>
-        <div id="ticket-details"></div>
-    </div>
-
-    <div class="logo">
-        <img src="logo1.png" alt="SK-Logo">
-    </div>
-    <div class="container">
-        <h1>VVIP</h1>
-        <div id="ticket-form">
-            <label for="ticket-type">Choose a ticket type:</label>
-            <select id="ticket-type">
-                <option value="standard">Standard Ticket</option>
-                <option value="vip">VIP Ticket</option>
-                <option value="vvip">VVIP</option>
-            </select>
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" min="1" value="1">
-            <button id="buy-ticket">Buy Ticket</button>
-        </div>
-        <div id="ticket-details"></div>
-    </div>
-    <script src="ticket.js"></script>
+    <script src="script.js"></script>
+  </div>
 </body>
 </html>
