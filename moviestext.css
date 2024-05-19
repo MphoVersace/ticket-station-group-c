@@ -186,6 +186,7 @@ menu-list-items .active{
     width: 370px;
     height: 300px;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .movie-list-item-title{
@@ -236,4 +237,34 @@ menu-list-items .active{
     opacity: 0.5;
     cursor: pointer;
 
+}
+
+.container.active{
+    background-color: whitesmoke;
+}
+
+.movie-list-title.active{
+    color: black;
+}
+
+.navbar-container.active{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.sidebar.active.active{
+    background-color: whitesmoke;
+}
+
+.left-menu-icon.active{
+    color: black;
+}
+
+.toggle.active{
+    background-color: black;
+}
+
+.toggle-ball.active{
+    background-color: whitesmoke;
+    transform: translateX(-20px);
 }
