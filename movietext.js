@@ -1,4 +1,3 @@
-
 //The Ticket class encapsulates the properties and behavior of a ticket.
 class Ticket {
     constructor(event, quantity, price, ticketType) {
@@ -22,6 +21,7 @@ class Ticket {
       return `Event: ${this.event}, Type: ${this.ticketType.toUpperCase()}, Quantity: ${this.quantity}, Total Cost: R${this.totalCost}`;
     }
   }
+  
   //The TicketStation class manages the collection of tickets and user interactions.
   class TicketStation {
     constructor() {
@@ -32,7 +32,8 @@ class Ticket {
     init() {
       this.setupEventListeners();
     }
-  //The setupEventListeners method is extracted to make the init method cleaner.
+  
+    //The setupEventListeners method is extracted to make the init method cleaner.
     setupEventListeners() {
       const preOrderButtons = document.querySelectorAll('.preOrderButton');
       preOrderButtons.forEach(button => {
@@ -42,14 +43,18 @@ class Ticket {
       document.getElementById('clearButton').addEventListener('click', () => this.clearCart());
     }
   
-
-    //Utilizes dataset properties for fetching event and price attributes.Uses parseFloat for price to handle potential decimal values.
+    //Utilizes dataset properties for fetching event and price attributes. Uses parseFloat for price to handle potential decimal values.
     preOrder(e) {
       const button = e.target.closest('.preOrderButton');
       const event = button.dataset.event;
       const price = parseFloat(button.dataset.price);
       const quantity = parseInt(document.getElementById('quantity').value, 10);
       const ticketType = document.querySelector('input[name="ticketType"]:checked').value;
+  
+      if (isNaN(quantity) || quantity <= 0) {
+        alert('Please enter a valid quantity.');
+        return;
+      }
   
       this.addTicketToCart(event, quantity, price, ticketType);
     }
@@ -59,7 +64,8 @@ class Ticket {
       this.tickets.push(ticket);
       this.renderCart();
     }
-  //The renderCart method calls both displayTickets and updateTotal for a cleaner approach.updateTotal parses ticket.totalCost as a float to ensure numerical addition.
+  
+    //The renderCart method calls both displayTickets and updateTotal for a cleaner approach. updateTotal parses ticket.totalCost as a float to ensure numerical addition.
     renderCart() {
       this.displayTickets();
       this.updateTotal();
@@ -85,21 +91,13 @@ class Ticket {
       this.tickets = [];
       this.renderCart();
     }
-  //proceed to payment 
+  
+    //proceed to payment 
     proceedToPayment() {
       const totalAmount = document.getElementById('totalAmount').textContent;
       alert(`Total amount to be paid: R${totalAmount}`);
-      
     }
   }
   
   document.addEventListener('DOMContentLoaded', () => new TicketStation());
   
-
-
-
-
-
-
-
-
