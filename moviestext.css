@@ -211,7 +211,7 @@ menu-list-items .active{
 
 .movie-list-item-button{
     padding: 10px;
-    background-color: plum;
+    background-color: rgb(5, 21, 126);
     color: white;
     border-radius: 10px;
     outline: none;
