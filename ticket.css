@@ -1,7 +1,8 @@
 /* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background: 'images/Blue Wall.png'
+    background: url('/NEW/images/Blue\ wall.png') no-repeat center center fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
 }
@@ -18,7 +19,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #1b1414;
 }
 
 .movie-selection,
@@ -33,7 +34,7 @@ h1 {
 }
 
 .seat {
-    background: #444451;
+    background: #7a7a87;
     height: 25px;
     width: 25px;
     margin: 5px;
