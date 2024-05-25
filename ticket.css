@@ -1,21 +1,21 @@
 /* styles.css */
 body {
     font-family: Arial, sans-serif;
-    background: url('/NEW/images/Blue\ wall.png') no-repeat center center fixed;
-    background-size: cover;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    width: 80%;
+    width: 65%;
     margin: auto;
     overflow: hidden;
+    background-color: #f0f0f0;
+    padding: 20px;
 }
+
 .image-container {
     text-align: center;
 }
-
 
 h1 {
     text-align: center;
@@ -40,6 +40,11 @@ h1 {
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Seat numbers color */
+    font-size: 12px; /* Adjust font size as needed */
 }
 
 .seat.selected {
@@ -53,4 +58,64 @@ h1 {
 .text {
     text-align: center;
     margin-top: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.col-md-12.fs-12 {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    line-height: 1.42857143;
+    font-family: 'Geometria', 'sans-serif';
+    font-weight: normal;
+    font-style: normal;
+    color: #666666;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 10px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;    /* Center items vertically if needed */
+    flex-wrap: wrap;        /* Wrap items if needed */
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Geometria', 'sans-serif';
+    font-weight: normal;
+    font-style: normal;
+    color: #666666;
+    font-size: 10px;
+    box-sizing: border-box;
+    line-height: 1.42857143;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#checkout-btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
 }
