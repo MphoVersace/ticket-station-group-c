@@ -103,19 +103,20 @@ h1 {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-    .flex-center1 {
+    .flex-center {
         display: flex;
         align-items: center;
         justify-content: center;
         font-family: 'Geometria', 'sans-serif';
         font-weight: normal;
         font-style: normal;
-        color: purple;
+        color: black;
         font-size: 10px;
         box-sizing:  border-box ;
         line-height: 1.42857143;
         -webkit-text-size-adjust: 100%;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        
     
         
 }
@@ -144,6 +145,18 @@ h1 {
     background-color: #6feaf6;
 }
 
-.seat stat-sel{
+.seat.sofa{
+    background-color: blue;
+}
+.seat.stat-3{
+    background-color: green;
+}
+.seat.stat-2{
+    background-color: palevioletred;
+}
+.seat.stat-1{
+    background-color: purple;
+}
+.seat.stat-stel{
     background-color: purple;
 }

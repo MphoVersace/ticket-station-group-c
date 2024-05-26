@@ -50,3 +50,4 @@ form.addEventListener('submit', (e) => {
         paymentStatus.textContent = 'Payment successful! You will get your ticket via email in a moment...';
     }, 2000);
 });
+

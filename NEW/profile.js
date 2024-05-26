@@ -37,4 +37,5 @@ class User {
     const gender = document.getElementById("gender").value;
     const mobile = document
   ```
+  document.querySelector("#user-signup-form > p")
   
