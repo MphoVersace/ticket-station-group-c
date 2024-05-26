@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding: 20px;
     background-color: #f0f0f0;
+  
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -33,7 +34,7 @@
   
   #profile-form input[type="submit"] {
     background-color: #4CAF50;
-    color: #fff;
+    color: black;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -52,11 +53,12 @@
   }
   /* This applies the background image to the entire page */
 body {
-    background-image: url('images/Blue wall.jpeg');
+    background-image: url('');
     background-size: cover; /* Ensures the image covers the entire background */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     margin: 0; /* Removes any default margin */
     padding: 0; 
+    
+    
 }
-#user-signup-form > p
