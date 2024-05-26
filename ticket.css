@@ -119,3 +119,6 @@ h1 {
 #checkout-btn:hover {
     background-color: #45a049; /* Darker green on hover */
 }
+.seat.stat-0 + span {
+    color: green;
+}
