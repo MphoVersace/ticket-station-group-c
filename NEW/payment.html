@@ -10,17 +10,27 @@
     <div class="container">
         <h1>Payment Gateway</h1>
         <form id="payment-form">
-            <label for="amount">Amount:</label>
-            <input type="number" id="amount" name="amount"><br><br>
-            <label for="card-number">Card Number:</label>
-            <input type="text" id="card-number" name="card-number"><br><br>
-            <label for="exp-month">Expiration Month:</label>
-            <input type="text" id="exp-month" name="exp-month"><br><br>
-            <label for="exp-year">Expiration Year:</label>
-            <input type="text" id="exp-year" name="exp-year"><br><br>
-            <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv"><br><br>
-            <input type="submit" value="Pay">
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+            </div>
+            <div class="form-group">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+            </div>
+            <div class="form-group">
+                <label for="exp-month">Expiration Month:</label>
+                <input type="text" id="exp-month" name="exp-month" required>
+            </div>
+            <div class="form-group">
+                <label for="exp-year">Expiration Year:</label>
+                <input type="text" id="exp-year" name="exp-year" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+            <button type="submit" class="btn">Pay</button>
         </form>
         <div id="payment-status"></div>
     </div>

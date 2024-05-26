@@ -1,53 +1,70 @@
-const form = document.getElementById('payment-form');
-const paymentStatus = document.getElementById('payment-status');
+// payment.js
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const amount = document.getElementById('amount').value.trim();
-    const cardNumber = document.getElementById('card-number').value.trim();
-    const expMonth = document.getElementById('exp-month').value.trim();
-    const expYear = document.getElementById('exp-year').value.trim();
-    const cvv = document.getElementById('cvv').value.trim();
-
-    // Simple validation to check if all fields are filled
-    if (!amount || !cardNumber || !expMonth || !expYear || !cvv) {
-        paymentStatus.textContent = 'Please fill in all the required fields.';
-        return;
+class Payment {
+    constructor(amount) {
+        this.amount = amount;
     }
 
-    // Additional validation for card number, expiry date, and CVV can be added here
-    // For example:
-    const cardNumberPattern = /^\d{16}$/; // Simple check for 16 digit card number
-    const expMonthPattern = /^(0[1-9]|1[0-2])$/; // Check for MM format
-    const expYearPattern = /^\d{4}$/; // Check for YYYY format
-    const cvvPattern = /^\d{3,4}$/; // Check for 3 or 4 digit CVV
-
-    if (!cardNumberPattern.test(cardNumber)) {
-        paymentStatus.textContent = 'Please enter a valid card number!!';
-        return;
+    validateAmount() {
+        if (this.amount <= 0) {
+            this.displayStatus('Invalid amount. Please enter a positive value.');
+            return false;
+        }
+        return true;
     }
 
-    if (!expMonthPattern.test(expMonth)) {
-        paymentStatus.textContent = 'Please enter a valid expiry month (MM).';
-        return;
+    displayStatus(message) {
+        const statusDiv = document.getElementById('payment-status');
+        statusDiv.textContent = message;
+    }
+}
+
+class CardPayment extends Payment {
+    constructor(amount, cardNumber, expMonth, expYear, cvv) {
+        super(amount);
+        this.cardNumber = cardNumber;
+        this.expMonth = expMonth;
+        this.expYear = expYear;
+        this.cvv = cvv;
     }
 
-    if (!expYearPattern.test(expYear)) {
-        paymentStatus.textContent = 'Please enter a valid expiry year (YYYY).';
-        return;
+    validateCardDetails() {
+        if (!this.cardNumber.match(/^\d{16}$/)) {
+            this.displayStatus('Invalid card number. Please enter a 16-digit number.');
+            return false;
+        }
+        if (!this.expMonth.match(/^(0[1-9]|1[0-2])$/)) {
+            this.displayStatus('Invalid expiration month. Please enter a value between 01 and 12.');
+            return false;
+        }
+        if (!this.expYear.match(/^\d{4}$/)) {
+            this.displayStatus('Invalid expiration year. Please enter a 4-digit year.');
+            return false;
+        }
+        if (!this.cvv.match(/^\d{3,4}$/)) {
+            this.displayStatus('Invalid CVV. Please enter a 3 or 4-digit number.');
+            return false;
+        }
+        return true;
     }
 
-    if (!cvvPattern.test(cvv)) {
-        paymentStatus.textContent = 'Please enter a valid CVV.';
-        return;
+    processPayment() {
+        if (this.validateAmount() && this.validateCardDetails()) {
+            this.displayStatus('Payment processed successfully!');
+            // Here you would integrate with a real payment gateway API.
+        }
     }
+}
 
-    paymentStatus.textContent = 'Payment processing...';
+document.getElementById('payment-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const amount = document.getElementById('amount').value;
+    const cardNumber = document.getElementById('card-number').value;
+    const expMonth = document.getElementById('exp-month').value;
+    const expYear = document.getElementById('exp-year').value;
+    const cvv = document.getElementById('cvv').value;
 
-    // Simulate a successful payment
-    setTimeout(() => {
-        paymentStatus.textContent = 'Payment successful! You will get your ticket via email in a moment...';
-    }, 2000);
+    const payment = new CardPayment(amount, cardNumber, expMonth, expYear, cvv);
+    payment.processPayment();
 });
-
