@@ -4,40 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profile Page</title>
+  <link rel="stylesheet" href="https://use.typekit.net/fcr2yni.css">
   <link rel="stylesheet" href="profile.css">
 </head>
 <body>
+  <header id="header">
+    <div class="container">
+      <div class="header-row">
+        <div id="logo">
+          <a href="index.html">
+            <img src="/NEW/images/logo1.png" alt="SK Logo">
+          </a>
+        </div>
+        <nav class="primary-menu">
+          <ul class="menu-container">
+            <li class="menu-item"><a class="menu-link" href="#">Home</a></li>
+            <li class="menu-item"><a class="menu-link" href="/movies.html">Movies</a></li>
+            <li class="menu-item"><a class="menu-link" href="#">Subscription Club</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
   <div class="profile-container">
     <h1>Create Profile</h1>
     <a href="/NEW/index.html">Home</a>
     <p class="form-alert">All fields are mandatory</p>
+    <form id="profile-form">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name"><br><br>
+      <input type="text" id="name" name="name" required><br><br>
+
       <label for="surname">Surname:</label>
-      <input type="text" id="surname" name="surname"><br><br>
+      <input type="text" id="surname" name="surname" required><br><br>
+
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email"><br><br>
+      <input type="email" id="email" name="email" required><br><br>
+
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password"><br><br>
+      <input type="password" id="password" name="password" required><br><br>
+
       <label for="mobile">Mobile Number:</label>
-      <input type="tel" id="mobile" name="mobile"><br><br>
-      <div class="layout radio-section row wrap"><div class="flex xs12"><label for="gender" class="gender-label">Gender</label></div> <div class="flex xs4"><div class="radio form-group" name="radio-gender"><input id="control-4" type="radio" name="radio-gender" class="form-control"> <label for="control-4">Female</label> <!----> <!----> <!----> <br></div></div> <div class="flex xs4"><div class="radio form-group" name="radio-gender"><input id="control-5" type="radio" name="radio-gender" class="form-control"> <label for="control-5">Male</label> <!----> <!----> <!----></div></div> <div class="flex xs4"><div class="radio form-group" name="radio-gender"><input id="control-6" type="radio" name="radio-gender" class="form-control"> <label for="control-6">I'd rather not say</label> <!----> <!----> <!----></div></div></div>
+      <input type="tel" id="mobile" name="mobile" required><br><br>
+
+      <label for="gender" class="gender-label">Gender:</label><br>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="no-say" name="gender" value="no-say">
+      <label for="no-say">I'd rather not say</label><br><br>
+
       <label for="birthday">Birthday:</label>
-      <input type="date" id="birthday" name="birthday"><br><br>
-    
+      <input type="date" id="birthday" name="birthday" required><br><br>
+
+      <input type="submit" value="Create Profile">
     </form>
+
     <h1>SK CLUB MOVIE CARD</h1>
-    <p>As an SK Club member, you earn points by watching <br> movies that add up to FREE movie tickets and <br>combos.
-      SK Club rolls out the red carpet for those who are serious <br> about experiencing movies the best way <br> possible! Join the SK Club now to unlock great discounts, earn points <br>and get special treatment!
+    <p>As an SK Club member, you earn points by watching movies that add up to FREE movie tickets and combos.
+      SK Club rolls out the red carpet for those who are serious about experiencing movies the best way possible! Join the SK Club now to unlock great discounts, earn points and get special treatment!
     </p>
     <p>You will automatically join SK Club and get 200 points.</p>
     <h3>Want to be the first to receive news?</h3>
-    <input id="control-12" type="checkbox" class="form-control " value="User.SendNewsletter">
-    <label for="control-12">Subscribe to the SK Newsletter to enter SK competitions first and recieve invitations to exclusive events.</label>
-    <p>By creating an SK profile <span>and joining SK Club</span>, you agree to our <a href="/ts&cs.html" target="_blank">Ts &amp; Cs</a> <span>and <a href="/ts&cs.html" target="_blank">SK Club Ts &amp; Cs</a><br> Want to find out more? Check out our <a href="/NEW/FAQ.html" target="_blank">FAQs</a>. </span></p>
+    <input id="newsletter" type="checkbox" value="User.SendNewsletter">
+    <label for="newsletter">Subscribe to the SK Newsletter to enter SK competitions first and receive invitations to exclusive events.</label>
+    <p>By creating an SK profile and joining SK Club, you agree to our <a href="/ts&cs.html">Ts & Cs</a><a href="/ts&cs.html">SK Club Ts & Cs</a><a href="/NEW/FAQ.html">FAQs</a>.</p>
 
     <div id="profile-display"></div>
-    <script src="profile.js"></script>
-  </div> 
+  </div>
+  <script src="profile.js"></script>
 </body>
 </html>
