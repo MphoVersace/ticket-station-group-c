@@ -115,3 +115,9 @@ h1 {
 .see-more-btn:hover {
     background-color: #0056b3;
 }
+
+.movie-list-item:hover ,.movie-list-item-images .movietext{
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0,5;
+}
